@@ -1,29 +1,51 @@
 /* === Sembunyikan Elemen Bawaan Tema Blogspot === */
-/* PENTING: #main telah dihapus dari daftar ini untuk mencegah halaman menjadi kosong. */
+/* Ini menyembunyikan bagian-bagian yang tidak diinginkan dari tema asli blog Anda */
 #header,
 .header-wrapper,
 #navfloat,
 #chat,
+#sidebar-wrapper,
+.post-footer,
+.feed-links,
 #footer,
 .footer-wrapper {
   display: none !important;
 }
 
-body {
-  overflow-x: hidden;
-  /* Atur warna latar belakang default jika konten tidak memenuhi layar */
-  background-color: #f9fafb; /* Sesuai dengan bg-gray-50 di Tailwind */
+/* === Paksa Tampilan Konten Laman Statis === */
+/* INI BAGIAN TERPENTING UNTUK MENGATASI HALAMAN KOSONG */
+/* Kode ini memastikan wadah konten Anda tidak disembunyikan oleh script tema */
+.post-body,
+.entry-content,
+.post-outer,
+.widget.Page {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
 }
 
-/* === Style Kustom Anda === */
+/* === Reset Tampilan Body === */
+/* Menghapus background dan pengaturan lain dari body tema asli */
+body,
+body.item-view {
+  overflow-x: hidden !important;
+  background-color: #f9fafb !important; /* Warna latar belakang laman */
+  background-image: none !important;
+  min-height: 100vh;
+}
 
-/* Menggunakan font Inter dari Google Fonts */
+/* === Style Kustom Anda (Tetap Sama) === */
 body {
     font-family: 'Inter', sans-serif;
-    color: #1f2937; /* Sesuai dengan text-gray-800 */
+    color: #1f2937;
 }
 
-/* Style untuk FAQ accordion */
 .faq-answer {
     transition: max-height 0.3s ease-out;
     overflow: hidden;
