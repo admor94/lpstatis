@@ -1,1 +1,29 @@
+/* === Sembunyikan Elemen Bawaan Tema Blogspot === */
+#header,
+#navfloat,
+#chat,
+#footer,
+#main {
+  display: none !important;
+}
+
+body {
+  overflow-x: hidden;
+  /* Atur warna latar belakang default jika konten tidak memenuhi layar */
+  background-color: #f9fafb; /* Sesuai dengan bg-gray-50 di Tailwind */
+}
+
+/* === Style Kustom Anda === */
+
+/* Menggunakan font Inter dari Google Fonts */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1f2937; /* Sesuai dengan text-gray-800 */
+}
+
+/* Style untuk FAQ accordion */
+.faq-answer {
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+}
 
