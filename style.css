@@ -1,9 +1,11 @@
 /* === Sembunyikan Elemen Bawaan Tema Blogspot === */
+/* PENTING: #main telah dihapus dari daftar ini untuk mencegah halaman menjadi kosong. */
 #header,
+.header-wrapper,
 #navfloat,
 #chat,
 #footer,
-#main {
+.footer-wrapper {
   display: none !important;
 }
 
