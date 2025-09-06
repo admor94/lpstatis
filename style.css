@@ -2,6 +2,10 @@
 /* Ini menyembunyikan bagian-bagian yang tidak diinginkan dari tema asli blog Anda */
 #header,
 .header-wrapper,
+.post-header,
+.entry-header,
+.post-title,
+.entry-title,
 #navfloat,
 #chat,
 #sidebar-wrapper,
@@ -13,12 +17,14 @@
 }
 
 /* === Paksa Tampilan Konten Laman Statis === */
-/* INI BAGIAN TERPENTING UNTUK MENGATASI HALAMAN KOSONG */
-/* Kode ini memastikan wadah konten Anda tidak disembunyikan oleh script tema */
+/* INI BAGIAN TERPENTING UNTUK MENGATASI HALAMAN KOSONG & MASALAH RESPONSIVE */
+/* Kode ini memastikan wadah konten Anda tidak disembunyikan dan lebarnya penuh */
 .post-body,
 .entry-content,
 .post-outer,
-.widget.Page {
+.widget.Page,
+.main-outer,
+.content-outer {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
